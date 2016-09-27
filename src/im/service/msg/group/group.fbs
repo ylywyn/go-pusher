@@ -1,0 +1,16 @@
+namespace pusher.fbs.group;
+
+table Group_ADDMEMBER_NOTICE
+{
+  Gid 	 			:uint;
+  MemberUid 	 	:uint;
+}
+table Group_DELMEMBER_NOTICE
+{
+  Gid 	 			:uint;
+  MemberUid 	 	:uint;
+}
+table Group_DELGROUP_NOTICE
+{
+  Gid 	 			:uint;
+}

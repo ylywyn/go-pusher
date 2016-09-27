@@ -1,0 +1,21 @@
+// automatically generated, do not modify
+
+package types
+
+///用户消息类型
+const (
+	UserMsgTypeMT_USER_NONE = 100
+	UserMsgTypeMT_USER_LOGIN_REQ = 101
+	UserMsgTypeMT_USER_LOGIN_REP = 102
+	UserMsgTypeMT_USER_LOGIN_FAILED_REP = 103
+	UserMsgTypeMT_USER_LOGOUT_REQ = 104
+	UserMsgTypeMT_USER_LOGOUT_REP = 105
+	UserMsgTypeMT_USER_KICKUSER = 106
+	UserMsgTypeMT_USER_FRIEND_USERINFO_REQ = 107
+	UserMsgTypeMT_USER_FRIEND_USERINFO_REP = 108
+	UserMsgTypeMT_USER_FRIEND_ADD = 109
+	UserMsgTypeMT_USER_FRIEND_DEL = 110
+	UserMsgTypeMT_USER_FRIEND_FORBIDEN = 111
+	UserMsgTypeMT_USER_FRIEND_UNFORBIDEN = 112
+	UserMsgTypeMT_USER_END = 199
+)

@@ -1,0 +1,102 @@
+namespace pusher.fbs.msg.types;
+
+///平台
+ enum Platform:byte (bit_flags){ 
+    PF_ALL,
+    PF_DESKTOP, 
+    PF_ANDROID,
+	PF_IOS,
+	PF_WEBPAGE
+ }
+ 
+///服务类型
+ enum ServiceType:byte{
+    ST_GENERALMSG =1,
+	ST_USER,
+	ST_GROUP,
+	ST_STATUS,
+	ST_COMMAND,
+	ST_OPTION,
+ }
+ 
+ ///一般消息类型
+ enum GeneralMsgType : short{
+     MT_GENERAL_NONE = 0,
+	 MT_GENERAL_MSG, 
+	 MT_GENERAL_GROUP_MSG,
+	 MT_GENERAL_BROADCAST_MSG,
+	 MT_GENERAL_NOTICE,
+	 MT_GENERAL_GROUP_NOTICE,
+	 MT_GENERAL_BROADCAST_NOTICE,
+	 MT_GENERAL_END=99, 
+ }
+ 
+  ///用户消息类型
+ enum UserMsgType:short{
+     MT_USER_NONE = 100,
+	 MT_USER_LOGIN_REQ,
+     MT_USER_LOGIN_REP,
+	 MT_USER_LOGIN_FAILED_REP,
+	 MT_USER_LOGOUT_REQ,
+	 MT_USER_LOGOUT_REP,
+	 MT_USER_KICKUSER,
+	 MT_USER_FRIEND_USERINFO_REQ,
+	 MT_USER_FRIEND_USERINFO_REP,
+	 MT_USER_FRIEND_ADD,
+ 	 MT_USER_FRIEND_DEL,
+	 MT_USER_FRIEND_FORBIDEN,
+	 MT_USER_FRIEND_UNFORBIDEN,
+	 MT_USER_END =199
+ }
+ 
+ 
+ ///群组消息
+  enum GroupMsgType:short{
+     MT_GROUP_NONE = 300,
+     MT_GROUP_GROUPINFO_REQ,
+	 MT_GROUP_GROUPINFO_REP,
+	 MT_GROUP_ADDMEMBER,
+	 MT_GROUP_DELMEMBER,
+	 MT_GROUP_DELGROUP,
+	 MT_GROUP_END =399
+ }
+ 
+  ///状态消息
+  enum StatusMsgType:short{
+     MT_STATUS_NONE = 400,
+     MT_STATUS_HEARTBEAT,
+	 MT_STATUS_ACK_FROMSERVER,
+	 MT_STATUS_ACK_FROMCLIENT,
+	 MT_STATUS_SESSIONINVALIDATE,
+	 ///MT_STATUS_CRITICAL_ERROR以后的为严重错误，客户端接到消息后必须关闭连接
+	 MT_STATUS_CRITICAL_ERROR = 450,
+	 ///消息头接收错误
+	 MT_STATUS_HEADERREAD_ERROR = 451,
+	 ///消息头解析错误
+	 MT_STATUS_HEADERPARSE_ERROR = 452,
+	 ///消息体接收错误
+	 MT_STATUS_BODYREAD_ERROR = 453,
+	 ///消息体解析错误
+	 MT_STATUS_BODYPARSE_ERROR = 454,
+	 
+	 MT_STATUS_END =499
+ }
+ 
+ 
+ 
+  ///命令消息
+  enum CommandMsgType:short{
+     MT_COMMAND_NONE = 500,
+	 MT_COMMAND_SUBS_REQ,
+	 MT_COMMAND_SUBS_REP,
+	 MT_COMMAND_END =599
+ } 
+ 
+ ///Option消息, 预留
+  enum OptionMsgType:short{
+     MT_OPTION_NONE = 600,
+	 MT_OPTION_END =699
+ }
+ 
+
+ 

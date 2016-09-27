@@ -1,0 +1,15 @@
+namespace session;
+
+
+table Session
+{
+    LoginType :ubyte; 
+	Admin :bool;
+	Appid :ushort;
+	Uid   :ulong;
+	AckMsgId :ulong;
+	Token :  string;
+	Key   :  string;
+	ConnClusterId : uint;
+	ConnSessionId :    ulong;
+}

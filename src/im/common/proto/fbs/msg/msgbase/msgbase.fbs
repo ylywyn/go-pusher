@@ -1,0 +1,46 @@
+//ylywyn
+include "../types/types.fbs";
+namespace pusher.fbs.msg.msgbase;
+
+
+table ApsPayLoad
+{
+   Sound      : string;
+   Badge      : ushort;
+   Contentav_ailable :bool;
+   Category   : string;
+}
+
+
+table PayLoad
+{
+   General  : string;
+   Aps      : ApsPayLoad; 
+   Extras   : string;
+}
+
+
+table Options
+{
+   Time_live       :uint;
+   Start_time      :uint;
+   Apns_production :bool;
+   Command         :[ubyte];
+}
+
+table Msg
+{
+  Type       :ushort     ;
+  To         :ulong	     ;
+  Connid     :ulong      ;
+  ConnServerid: ushort   ;
+  Gid        :ulong      ;
+  Text       :[ubyte]  	 ;
+  Time       :ulong   	 ;
+  Msgid      :ulong   	 ;
+  From       :ulong   	 ;
+  Appid      :ushort     ;
+  Platform   :ubyte      ;
+  Payload    :PayLoad    ;
+  Option     :Options    ;
+}

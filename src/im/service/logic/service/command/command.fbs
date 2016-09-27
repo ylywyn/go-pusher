@@ -1,0 +1,14 @@
+//ylywyn
+include "base.fbs";
+namespace pusher.fbs;
+
+table Command_Friend
+{
+  Asker		:uint;
+  Receiver	:uint;
+}
+table Command_Group
+{
+  Gid 	 			:uint;
+  MemberUid 	 	:uint;
+}

@@ -1,0 +1,14 @@
+flatc.exe -c  --no-prefix msg/types/types.fbs
+flatc.exe -c  --no-prefix msg/user/login.fbs 
+flatc.exe -c  --no-prefix msg/msgbase/msgbase.fbs 
+
+flatc.exe -j  --no-prefix msg/types/types.fbs
+flatc.exe -j  --no-prefix msg/msgbase/msgbase.fbs 
+
+
+flatc.exe -g  --no-prefix msg/types/types.fbs
+flatc.exe -g  --no-prefix msg/msgbase/msgbase.fbs 
+flatc.exe -g  --no-prefix msg/login/login.fbs 
+
+flatc.exe -n  --no-prefix msg/types/types.fbs
+flatc.exe -n  --no-prefix msg/msgbase/msgbase.fbs 
